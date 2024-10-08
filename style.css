@@ -1,0 +1,126 @@
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-bg: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-bg: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    font-family: "Outfit", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--Very-dark-blue-bg);
+}
+.page{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Very-dark-blue-bg);
+}
+.container{
+    background-color: var(--Very-dark-blue-card-bg);
+    display: grid;
+    grid-auto-columns: 250px 250px;
+    padding: 15px;
+    grid-template-rows: 250px 1fr;
+    border-radius: 17px;
+}
+.image{
+    background-image: url(images/image-equilibrium.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 17px;
+    margin-bottom: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.image:hover::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    border-radius: 17px;
+}
+.image:hover::before{
+    content: url(images/icon-view.svg);
+    width: 50px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+.link{
+    color: var(--White);
+    text-decoration: none;
+    font-size: 1.4em;
+}
+a:hover{
+    color: var(--Cyan);
+}
+p{
+    width: 102%;
+    color: var(--Soft-blue);
+    font-weight: 300;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    position: relative;
+}
+.days-lef{
+    border-bottom: 1px solid var(--Very-dark-blue-line);
+    padding: 15px 0;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.ETH{
+    color: var(--Cyan);
+    position: relative;
+    margin-left: 15px;
+}
+.ETH::before{
+    content: url(images/icon-ethereum.svg);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: -15px;
+}
+.days{
+    color: var(--Soft-blue);
+    position: relative;
+}
+.days::before{
+    content: url(images/icon-clock.svg);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: -19px;
+    top: 2px;
+}
+.creator-info{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 0.9em;
+}
+.avatar{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+.name{
+    color: var(--Soft-blue);
+    margin-left: 3px;
+    cursor: pointer;
+}
+.name:hover{
+    color: var(--Cyan);
+}
